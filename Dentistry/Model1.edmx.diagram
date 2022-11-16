@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3e68b7feeaae4853b6d332f00302b862" Name="Diagram1">
+        <EntityTypeShape EntityType="myModel.Врачи" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="myModel.Диагноз" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="myModel.Записи_На_Прием" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="myModel.Карта" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="myModel.Оказанные_Услуги" Width="1.5" PointX="7.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="myModel.Пользователи" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="myModel.Посещения" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="myModel.Приемы" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="myModel.Расписание" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="myModel.Роли" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="myModel.Услуги" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="myModel.FK_Запись_На_Прием_Врачи" ManuallyRouted="false" />
+        <AssociationConnector Association="myModel.FK_Приемы_Врачи" ManuallyRouted="false" />
+        <AssociationConnector Association="myModel.FK_Расписание_Врачи" ManuallyRouted="false" />
+        <AssociationConnector Association="myModel.FK_Посещения_Диагноз" ManuallyRouted="false" />
+        <AssociationConnector Association="myModel.FK_Запись_На_Прием_Пациент" ManuallyRouted="false" />
+        <AssociationConnector Association="myModel.FK_Посещения_Пациент" ManuallyRouted="false" />
+        <AssociationConnector Association="myModel.FK_Оказанные_Услуги_Посещения" ManuallyRouted="false" />
+        <AssociationConnector Association="myModel.FK_Оказанные_Услуги_Услуги" ManuallyRouted="false" />
+        <AssociationConnector Association="myModel.FK_Пользователи_Роли" ManuallyRouted="false" />
+        <AssociationConnector Association="myModel.FK_Посещения_Приемы" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

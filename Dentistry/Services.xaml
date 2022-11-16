@@ -1,0 +1,37 @@
+﻿<Window x:Class="Dentistry.Services"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dentistry"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Список услуг" Height="450" Width="800">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Background="#6da6c7">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="28"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <TextBox x:Name="txtSearch" Width="210" Height="28" TextChanged="TxtSearch_TextChanged" Margin="22,0,560,0" />
+            <ComboBox x:Name="cmbSort" Width="150" Grid.Row="0" Margin="252,0,390,0" SelectionChanged="CmbSort_SelectionChanged"/>
+
+            <StackPanel Grid.Row="1" Width="770">
+                <ListView Name="lstServices" Margin="5" Width="750">
+                    <ListView.View>
+                        <GridView>
+                            <GridView.Columns>
+                                <GridViewColumn Header="Услуга" DisplayMemberBinding="{Binding Наименование_Услуги}" Width="500"/>
+                                <GridViewColumn Header="Стоимость" DisplayMemberBinding="{Binding Стоимость_Услуги}" Width="250"/>
+                            </GridView.Columns>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+            <Button Grid.Row="2" x:Name="btn_Exit" Content="Главное меню" HorizontalAlignment="Stretch" Click="Btn_Exit_Click" Width="791" />
+        </Grid>
+    </ScrollViewer>
+</Window>

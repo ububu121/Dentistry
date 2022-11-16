@@ -1,0 +1,29 @@
+﻿<Application x:Class="Dentistry.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Dentistry"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#06048c"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+       
+        <Style TargetType="ListView">
+            <Setter Property="Background" Value="LightGray"/>
+        </Style>
+
+        <Style TargetType="TextBox" >
+            <Setter Property="Background" Value="#bae0ff"/>
+        </Style>
+
+        <Style TargetType="ComboBox" >
+            <Setter Property="Background" Value="#bae0ff"/>
+        </Style>
+
+        <Style TargetType="RichTextBox" >
+            <Setter Property="Background" Value="#bae0ff"/>
+        </Style>
+
+    </Application.Resources>
+</Application>

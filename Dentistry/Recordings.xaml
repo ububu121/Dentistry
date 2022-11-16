@@ -1,0 +1,44 @@
+﻿<Window x:Class="Dentistry.Recordings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dentistry"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Recordings" Height="450" Width="800">
+    <Grid Background="#6da6c7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="txtSearch" Grid.Row="0" Width="250" Margin="0,0,544,0" TextChanged="TxtSearch_TextChanged"/>
+        <Label Background="#18468c" Foreground="White" FontSize="14" x:Name="label" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" Content="ФИО" HorizontalAlignment="Left" Margin="0,12,0,0" VerticalAlignment="Top" Width="250"/>
+        <Label Background="#18468c" Foreground="White" FontSize="14" x:Name="label1" Grid.Row="1" HorizontalContentAlignment="Center" Content="Дата" HorizontalAlignment="Left" Margin="250,12,0,0" VerticalAlignment="Top" Width="150"/>
+        <Label Background="#18468c" Foreground="White" FontSize="14" x:Name="label2" Grid.Row="1" Grid.Column="2" HorizontalContentAlignment="Center" Content="Время" HorizontalAlignment="Left" Margin="400,12,0,0" VerticalAlignment="Top" Width="150"/>
+        <Label Background="#18468c" Foreground="White" FontSize="14" x:Name="label3" Grid.Row="1" HorizontalContentAlignment="Center" Content="Посетил" HorizontalAlignment="Left" Margin="550,12,0,0" VerticalAlignment="Top" Width="242"/>
+
+        <StackPanel Grid.Row="2">
+            <ListView x:Name="listViewRecordings" VerticalAlignment="Stretch" Height="361">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Vertical" Width="250" >
+                                <Label Content="{Binding ФИО}"  HorizontalContentAlignment="Center" Width="250" Margin="0,0,13,0"/>
+                                <Button x:Name="Delete" Content="Удалить" Width="60" Height="25" Click="Delete_Click" Tag="{Binding Path=Код_Записи}" />
+                            </StackPanel>
+                            <Label Content="{Binding Дата_Приема}" HorizontalContentAlignment="Center" Width="150" />
+                            <Label Content="{Binding Время_Приема}" HorizontalContentAlignment="Center" Width="150" />
+                            <CheckBox x:Name="cb_priem" Click="Cb_priem_Click" Tag="{Binding Path=Код_Записи}" Width="250"  Margin="100,0,100,0"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+        </StackPanel>
+        <Button Content="Главное меню" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Width="792" Height="20" Click="Button_Click"/>
+    </Grid>
+</Window>

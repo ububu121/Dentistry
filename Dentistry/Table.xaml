@@ -1,0 +1,38 @@
+﻿<Window x:Class="Dentistry.Table"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dentistry"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Расписание" Height="450" Width="800">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Background="#6da6c7">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="340*"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="1">
+                <ListView Name="lstTable" Margin="5" PreviewMouseLeftButtonUp="LstTable_PreviewMouseLeftButtonUp">
+                    <ListView.View>
+                        <GridView>
+                            <GridView.Columns>
+                                <GridViewColumn Header="ФИО" DisplayMemberBinding="{Binding ФИО}" Width="200"/>
+                                <GridViewColumn Header="Специальность" DisplayMemberBinding="{Binding Специальность}" Width="200"/>
+                                <GridViewColumn Header="Кабинет" DisplayMemberBinding="{Binding Кабинет}" Width="200"/>
+                                <GridViewColumn Header="Часы работы" DisplayMemberBinding="{Binding Пн}" Width="162"/>
+                            </GridView.Columns>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+
+            <Button Content="Редактировать расписание" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Width="790" Height="20" x:Name="btnEdit" IsEnabled="False" Click="BtnEdit_Click"/>
+            <Button Content="Главное меню" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Width="790" Height="20" Click="Button_Click"/>
+        </Grid>
+    </ScrollViewer>
+</Window>

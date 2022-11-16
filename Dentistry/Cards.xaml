@@ -1,0 +1,39 @@
+﻿<Window x:Class="Dentistry.Cards"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dentistry"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Личные карты пациентов" Height="450" Width="800">
+    <Grid Background="#6da6c7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" x:Name="txtSearch"  TextChanged="TxtSearch_TextChanged" Width="250" Margin="0,0,544,0"/>
+        <ComboBox SelectionChanged="CmbSort_SelectionChanged" Grid.Row="0" x:Name="cmbSort" Width="150" Margin="268,0,374,0"/>
+        <StackPanel/>
+        <Button Content="Главное меню" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Width="792" Height="20" Click="Button_Click"/>
+        <ListView x:Name="listViewCards" VerticalAlignment="Stretch" Height="Auto" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="7,0,0,0">
+                        <StackPanel Orientation="Vertical" Width="300" Height="Auto">
+                            <Label Content="{Binding ФИО}" HorizontalContentAlignment="Center" Width="300" Margin="0,0,13,0"/>
+                            <Label Content="{Binding Дата_рождения}" HorizontalContentAlignment="Center" Width="300" Margin="0,0,13,0"/>
+                            <Label Content="{Binding Страховой_Полис}" HorizontalContentAlignment="Center" Width="300" Margin="0,0,13,0"/>
+                            <Label Content="{Binding Телефон}" HorizontalContentAlignment="Center" Width="300" Margin="0,0,13,0"/>
+                        </StackPanel>
+                        <Label VerticalContentAlignment="Center" Width="422" Height="Auto" Margin="0,0,13,0">
+                            <TextBlock TextWrapping="Wrap" Text ="{Binding Описание_приема}"/>
+                        </Label>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Window>

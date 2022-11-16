@@ -1,0 +1,27 @@
+﻿<Window x:Class="Dentistry.CreateCards"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dentistry"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Создать личную карту" Height="390" Width="340">
+    <Grid Background="#6da6c7" >
+        <Label Background="#18468c" Foreground="White" FontSize="16" x:Name="label" Content="Фамилия" HorizontalAlignment="Left" Margin="35,32,0,0" VerticalAlignment="Top" Width="118"/>
+        <Label Background="#18468c" Foreground="White" x:Name="label1" Content="Имя" HorizontalAlignment="Left" Margin="35,77,0,0" VerticalAlignment="Top" Width="118" FontSize="16"/>
+        <Label Background="#18468c" x:Name="label2" Foreground="White" Content="Отчество" HorizontalAlignment="Left" Margin="35,122,0,0" VerticalAlignment="Top" Width="118" FontSize="16"/>
+        <Label Background="#18468c" x:Name="label3" Content="Номер телефона" Foreground="White" HorizontalAlignment="Left" Margin="35,167,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Background="#18468c" Foreground="White" x:Name="label4" Content="Дата рождения" HorizontalAlignment="Left" Margin="35,211,0,0" VerticalAlignment="Top" Width="118" FontSize="14"/>
+        <Label Background="#18468c" x:Name="label5" Foreground="White" Content="Номер полиса" HorizontalAlignment="Left" Margin="35,256,0,0" VerticalAlignment="Top" Width="118" FontSize="14"/>
+        <TextBox x:Name="txtFName" PreviewTextInput="TxtFName_PreviewTextInput" HorizontalAlignment="Left" Height="26" Margin="183,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <TextBox x:Name="txtLName" PreviewTextInput="TxtLName_PreviewTextInput"  HorizontalAlignment="Left" Height="26" Margin="183,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <TextBox x:Name="txtPatronymic" PreviewTextInput="TxtPatronymic_PreviewTextInput"  HorizontalAlignment="Left" Height="26" Margin="183,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="14" Width="120"/>
+        <DatePicker x:Name="dpDate" HorizontalAlignment="Left" Margin="183,211,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Button x:Name="btn_Write" Content="Создать" HorizontalAlignment="Left" Margin="35,304,0,0" VerticalAlignment="Top" Width="118" Click="Btn_Write_Click" Height="33" FontSize="14" />
+        <Button x:Name="btn_Exit" Content="Главное меню" HorizontalAlignment="Left" Margin="183,304,0,0" VerticalAlignment="Top" Width="120" Click="Btn_Exit_Click" Height="33" FontSize="14" />
+        <TextBox x:Name="txtDoc" FontSize="14" PreviewTextInput="TxtDoc_PreviewTextInput"  HorizontalAlignment="Left" Height="26" Margin="183,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNumber" FontSize="14" PreviewTextInput="TxtNumber_PreviewTextInput"  HorizontalAlignment="Left" Height="26" Margin="183,167,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
